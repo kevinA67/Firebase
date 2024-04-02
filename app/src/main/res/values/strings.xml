@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PersonasFirabase</string>
+
+    <string name="nombre">Nombre</string>
+    <string name="fecha">Fecha de nacimiento</string>
+    <string name="apellido">Apellido</string>
+    <string name="correo">Correo</string>
+    <string name="tomarVideo">Tomar foto</string>
+    <string name="salvarContacto">Salvar contacto</string>
+    <string name="contactosSalvados">Contactos salvados</string>
+    <string name="lista">Lista</string>
+    <string name="actualizar">Actualizar contacto</string>
+    <string name="eliminar">Eliminar contacto</string>
+    <string name="actualizar2">Guardar cambios</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "395900068159",
+    "project_id": "personasfirabase",
+    "storage_bucket": "personasfirabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395900068159:android:39d05a45f7e0f7b381738a",
+        "android_client_info": {
+          "package_name": "com.example.personasfirabase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrdtAmfTWO4njZGNopdbaiksxTDHHARig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
