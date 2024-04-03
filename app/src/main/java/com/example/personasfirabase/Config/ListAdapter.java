@@ -2,6 +2,7 @@ package com.example.personasfirabase.Config;
 
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.personasfirabase.R;
 
+import java.io.File;
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
@@ -82,6 +84,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             nombre.setText(personas.getNombre()+" "+personas.getApellido());
             correo.setText(personas.getCorreo());
             fechaNac.setText(personas.getFechanac());
+            File foto=new File(personas.getFoto());
+            imageView.setImageURI(Uri.fromFile(foto));
         }
     }
 

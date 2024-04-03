@@ -80,6 +80,7 @@ public class ActivityLista extends AppCompatActivity {
                 intent.putExtra("apellido", personas.getApellido());
                 intent.putExtra("correo", personas.getCorreo());
                 intent.putExtra("fecha", personas.getFechanac());
+                intent.putExtra("foto", personas.getFoto());
             }
             startActivity(intent);
             finish();
@@ -106,6 +107,7 @@ public class ActivityLista extends AppCompatActivity {
                                 persona.setApellido(documentSnapshot.get("apellido").toString());
                                 persona.setCorreo(documentSnapshot.get("correo").toString());
                                 persona.setFechanac(documentSnapshot.get("fechanac").toString());
+                                persona.setFoto(documentSnapshot.get("foto").toString());
 
                                 listPersonas.add(persona);
                                 //listPersonas.add(new Personas(persona.getId(), persona.getNombres(), persona.getApellidos(), persona.getCorreo(), persona.getFechanac()));

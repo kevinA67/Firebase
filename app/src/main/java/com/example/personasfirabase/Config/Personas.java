@@ -21,13 +21,14 @@ public class Personas {
 //        this.foto = foto;
 //    }
 
-//    public Personas(String id, String nombres, String apellidos, String correo, String fechanac) {
-//        this.id = id;
-//        this.nombre = nombres;
-//        this.apellido = apellidos;
-//        this.correo = correo;
-//        this.fechanac = fechanac;
-//    }
+
+    public Personas(String nombre, String apellido, String correo, String fechanac, String foto) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.fechanac = fechanac;
+        this.foto = foto;
+    }
 
     public Personas(String nombres, String apellidos, String correo, String fechanac) {
         this.nombre = nombres;

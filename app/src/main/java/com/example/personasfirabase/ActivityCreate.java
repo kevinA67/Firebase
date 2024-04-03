@@ -38,6 +38,7 @@ public class ActivityCreate extends AppCompatActivity {
     EditText nombre, apellido, correo, fecha;
     ImageView imageView;
     FirebaseFirestore firebaseFirestore;
+    File foto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +71,10 @@ public class ActivityCreate extends AppCompatActivity {
             String correo = this.correo.getText().toString().trim();
             String fechaNacimiento = fecha.getText().toString().trim();
 
-            if (nombre.isEmpty() || apellido.isEmpty() || correo.isEmpty() || fechaNacimiento.isEmpty()) {
+            if (nombre.isEmpty() || apellido.isEmpty() || correo.isEmpty() || fechaNacimiento.isEmpty() || foto==null) {
                 Toast.makeText(this, "Llenar todos los campos.", Toast.LENGTH_LONG).show();
             } else {
-                Personas nuevaPersona = new Personas(nombre, apellido, correo, fechaNacimiento);
+                Personas nuevaPersona = new Personas(nombre, apellido, correo, fechaNacimiento, foto.toString());
                 crear(nuevaPersona);
             }
         });
@@ -109,6 +110,9 @@ public class ActivityCreate extends AppCompatActivity {
         fecha.setText("");
         nombre.setFocusableInTouchMode(true);
         nombre.requestFocus();
+        if(imageView!=null){
+            imageView.setImageURI(null);
+        }
     }
 
     private void PermisosCamara() {
@@ -182,7 +186,7 @@ public class ActivityCreate extends AppCompatActivity {
 
         if (requestCode == REQUEST_IMAGE) {
             try {
-                File foto = new File(currentPhotoPath);
+                foto = new File(currentPhotoPath);
                 imageView.setImageURI(Uri.fromFile(foto));
             } catch (Exception ex) {
                 ex.toString();
